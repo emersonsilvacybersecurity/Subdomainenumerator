@@ -1,0 +1,7 @@
+www
+mail
+dev
+homolog
+ftp
+admin
+api
