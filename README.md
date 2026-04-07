@@ -1,18 +1,65 @@
-#  Verificador de Subdomínios (DNS Enumerator)
+# 🌐 Python Subdomain Enumerator
 
-Dando continuidade à minha série de projetos em **Python para Cybersecurity**, o sexto projeto foca na fase de **Reconhecimento Ativo (Recon)**. Enquanto os projetos anteriores focaram em identificar portas abertas e detectar ataques locais, este script permite mapear a **Superfície de Ataque (Attack Surface)** externa de um domínio alvo.
-
-A enumeração de subdomínios é uma etapa crítica em Pentests e Bug Bounty, pois subdomínios esquecidos (como `dev.alvo.com` ou `teste.alvo.com`) costumam ser portas laterais com menos camadas de segurança que o domínio principal.
+Ferramenta de reconhecimento ativo para descoberta de subdomínios utilizando técnicas de brute force com wordlists.
 
 ---
 
-##  Destaques Técnicos
-* **Integração com Wordlists:** Processamento de listas de termos customizáveis para Brute Force de DNS.
-* **Automação de Requisições:** Uso da biblioteca `requests` para validar se o subdomínio não apenas existe, mas está respondendo ativamente.
-* **Tratamento de Exceções:** Implementação de filtros para `ConnectionError` e `Timeout`, garantindo que o script não trave em hosts offline.
-* **Arquitetura Limpa:** Separação entre a lógica de busca e os dados de entrada (Wordlists).
+## 🎯 Objetivo
+
+Mapear a superfície de ataque de um domínio identificando subdomínios ativos, auxiliando em atividades de pentest e análise de segurança.
 
 ---
 
-Aviso Legal (Disclaimer)
-Este projeto possui fins estritamente educacionais e laboratoriais, desenvolvidos como parte da minha graduação em Segurança Cibernética. O uso desta ferramenta em domínios sem autorização prévia é de inteira responsabilidade do usuário e pode ser considerado ilegal.
+## ⚙️ Funcionalidades
+
+- 🔎 Descoberta de subdomínios via wordlist.
+- 🌐 Validação de hosts via HTTP/HTTPS.
+- ⚡ Execução automatizada e rápida.
+- ⚠️ Tratamento de erros e timeout.
+- 🧠 Identificação de ativos expostos.
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+- Python 3.x
+- requests
+
+---
+
+## 🚀 Como executar
+
+Siga os passos abaixo para rodar o projeto localmente:
+
+### 📥 1. Clonar o repositório
+```bash
+git clone https://github.com/emersonsilvacybersecurity/Subdomainenumerator.git
+```
+
+### 📂 2. Acessar a pasta do projeto
+```bash
+cd Subdomainenumerator
+```
+
+### ▶️ 3. Executar o script
+
+#### 💻 Windows
+```bash
+python subenum.py
+```
+
+#### 🐧 Linux
+```bash
+python3 subenum.py
+```
+
+---
+
+## ⚠️ Análise de segurança (Aviso Legal)
+
+Este projeto foi desenvolvido exclusivamente para fins educacionais e auditorias de segurança autorizadas.
+
+- ⚖️ Ética: O uso desta ferramenta contra alvos sem permissão prévia é ilegal.
+- 🚫 Responsabilidade: O autor não se responsabiliza por qualquer uso indevido ou danos causados a terceiros.
+
+---
